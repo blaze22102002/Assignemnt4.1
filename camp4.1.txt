@@ -1,0 +1,39 @@
+Append a text to the existing text in a file. Other files should be  
+able to interact with this file only in the Read Mode while your 
+application is interacting with the file.
+------------------------------------------------------------------------------------------------------
+
+Console.Write("Enter text to append to the file: ");
+string userInput = Console.ReadLine();
+
+      
+File.AppendAllText(file_path, userInput);
+
+______________________________________________________________________________________________________
+Retrieve five characters starting from the third character and 
+display it in a console
+
+  Console.WriteLine(file_content);
+  string substring = file_content.Substring(2, 5);
+
+  Console.WriteLine("Retrieved characters:");
+  Console.WriteLine(substring);
+
+
+
+_______________________________________________________________
+
+
+Console.Write("Enter destination file path : ");
+string destinationFilePath = Console.ReadLine();
+
+
+   
+    
+    if (File.Exists(file_path))
+    {
+       
+        File.Copy(file_path, destinationFilePath);
+
+        Console.WriteLine("File copied successfully.");
+       }
